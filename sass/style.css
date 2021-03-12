@@ -1,0 +1,13 @@
+html {
+  scroll-behavior: smooth;
+}
+
+html :root {
+  --gray1: rgba(0, 0, 0, 0.5);
+  --gray2: rgba(119, 119, 119, 0.05);
+}
+
+html body {
+  font-family: "Noto Sans KR", sans-serif;
+}
+/*# sourceMappingURL=style.css.map */

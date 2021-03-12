@@ -1,0 +1,38 @@
+// variables:
+$breakpoint-xs: 360px;
+$breakpoint-sm: 767px;
+$breakpoint-md: 1023px;
+$breakpoint-lg: 1360px;
+
+@mixin media($media) {
+  @if $media == xs {
+    @media (max-width: $breakpoint-sm) { @content; }
+  }
+  @else if $media == sm {
+    @media (min-width: $breakpoint-sm) and (max-width: $breakpoint-md) { @content; }
+  }
+  @else if $media == md {
+    @media (min-width: $breakpoint-md) and (max-width: $breakpoint-lg) { @content; }
+  }
+  @else if $media == lg {
+    @media (min-width: $breakpoint-lg) { @content; }
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  :root {
+    --gray1: rgba(0, 0, 0, 0.5);
+    --gray2: rgba(119, 119, 119, 0.05);
+  }
+
+  body {
+    font-family: "Noto Sans KR", sans-serif;
+  
+
+  }
+
+ 
+}
+
+  
