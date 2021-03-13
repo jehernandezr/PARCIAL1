@@ -8,10 +8,18 @@ html :root {
 }
 
 html body {
-  font-family: "Lato";
+  font-family: Lato;
+  font-style: normal;
   margin: 0px;
   background: #ECE9E9;
+  width: 1440px;
+  height: 1024px;
   /* Rectangle 1 */
+}
+
+html body main, html body section {
+  width: 1440px;
+  height: 1024px;
 }
 
 html body .bg-mio {
@@ -85,22 +93,229 @@ html body .butnfav {
   background-color: rgba(255, 255, 255, 0);
   background-image: url("/img/fav.png");
   background-repeat: no-repeat;
+  background-position: center;
 }
 
-html body #products {
+html body #products, html body #detail {
   position: relative;
   padding-top: 159px;
   padding-left: 100px;
   padding-right: 100px;
 }
 
-html body #products .card {
-  position: absolute;
+html body #products .card, html body #detail .card {
+  position: relative;
   width: 1240px;
   height: 221px;
   background: #FFFFFF;
   border: 1px solid rgba(0, 0, 0, 0.15);
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  display: inline-block;
+}
+
+html body #products .card .card-image, html body #detail .card .card-image {
+  position: relative;
+  display: inline-block;
+  width: 180px;
+  height: 180px;
+  left: 44px;
+  top: 30px;
+  bottom: 11px;
+  right: 1016px;
+  border-radius: 15px;
+}
+
+html body #products .card .card-image img, html body #detail .card .card-image img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  vertical-align: top;
+}
+
+html body #products .card .card-content, html body #detail .card .card-content {
+  position: relative;
+  left: 124px;
+  top: 17px;
+  display: inline-block;
+}
+
+html body #products .card .card-content .price, html body #detail .card .card-content .price {
+  width: 150px;
+  height: 35px;
+  display: inline-block;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 29px;
+  color: #000000;
+}
+
+html body #products .card .card-content .city, html body #detail .card .card-content .city {
+  display: inline-block;
+  width: 150px;
+  height: 35px;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  left: 513px;
+  color: #000000;
+}
+
+html body #products .card .card-content .model, html body #detail .card .card-content .model {
+  width: 500px;
+  height: 35px;
+  top: 112px;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+  color: #000000;
+}
+
+html body #products .card .card-content .shipping, html body #detail .card .card-content .shipping {
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+  bottom: 2px;
+}
+
+html body #products .card .shipping, html body #detail .card .shipping {
+  position: relative;
+  background-image: url("/img/ico_shipping.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 20px, 20px;
+}
+
+html body #products .card-large, html body #detail .card-large {
+  width: 1240px;
+  height: 852px;
+  top: 0px;
+  position: relative;
+  display: inline-block;
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html body #products .card-large .card-image-large, html body #detail .card-large .card-image-large {
+  position: relative;
+  display: inline-block;
+  width: 563px;
+  height: 520px;
+  left: 50px;
+  top: 54px;
+  bottom: 278px;
+  border-radius: 15px;
+  vertical-align: top;
+}
+
+html body #products .card-large .card-image-large img, html body #detail .card-large .card-image-large img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  vertical-align: top;
+}
+
+html body #products .card-large .card-buy-favs, html body #detail .card-large .card-buy-favs {
+  font-style: normal;
+  font-weight: normal;
+  position: absolute;
+  width: 312px;
+  height: 35px;
+  left: 878px;
+  top: 0px;
+  color: #000000;
+}
+
+html body #products .card-large .card-buy-favs .usado-unid, html body #detail .card-large .card-buy-favs .usado-unid {
+  position: relative;
+  top: 54px;
+  width: 312px;
+  height: 35px;
+  font-size: 14px;
+  line-height: 17px;
+  vertical-align: top;
+}
+
+html body #products .card-large .card-buy-favs .title, html body #detail .card-large .card-buy-favs .title {
+  vertical-align: top;
+  width: 312px;
+  height: 31px;
+  top: 120px;
+  left: 0px;
+  right: 50px;
+  font-size: 24px;
+  line-height: 29px;
+}
+
+html body #products .card-large .card-buy-favs .money, html body #detail .card-large .card-buy-favs .money {
+  width: 312px;
+  height: 33px;
+  top: 177px;
+  font-size: 24px;
+  line-height: 29px;
+  left: 0px;
+}
+
+html body #products .card-large .card-buy-favs .btn-addfav, html body #detail .card-large .card-buy-favs .btn-addfav {
+  width: 312px;
+  height: 51px;
+  left: 0px;
+  top: 258px;
+  font-size: 24px;
+  line-height: 29px;
+  text-align: center;
+  color: #FFFFFF;
+  background: #C968CB;
+  border-radius: 20px;
+}
+
+html body #products .card-large .card-buy-favs .btn-cart, html body #detail .card-large .card-buy-favs .btn-cart {
+  width: 312px;
+  height: 51px;
+  left: 0px;
+  top: 327px;
+  font-size: 24px;
+  line-height: 29px;
+  text-align: center;
+  color: #FFFFFF;
+  background: #8C86D7;
+  border-radius: 20px;
+}
+
+html body #products .card-large .card-description, html body #detail .card-large .card-description {
+  position: relative;
+  top: 23px;
+}
+
+html body #products .card-large .card-description .desc-title, html body #detail .card-large .card-description .desc-title {
+  width: 312px;
+  height: 31px;
+  left: 50px;
+  top: 23px;
+  position: relative;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 28px;
+  line-height: 34px;
+  color: #000000;
+}
+
+html body #products .card-large .card-description .text-p, html body #detail .card-large .card-description .text-p {
+  position: relative;
+  font-style: Regular;
+  font-size: 14px;
+  top: 77px;
+  left: 50px;
+  line-height: 17px;
+  line-height: 100%;
+  align: justify;
+  vertical-align: top;
+  color: #B8ACAC;
+  width: 828px;
+  height: 170px;
 }
 /*# sourceMappingURL=style.css.map */

@@ -29,17 +29,22 @@
         </nav>
       </header>
       <main>
-        <section id="products">
-            <div class="card" id="1">
-                <div class="card-image">
+        <section id="detail">
+            <div class="card-large" id="1">
+                <div class="card-image-large">
                 <img src="/img/pruba.png" onclick=irdetail(this) alt="image">   
                 </div>
-                <div class="card-content">
-                <span class="price">
-                <img class="shipping"></img>
-                </span>
-                <span class="city"></span>
-                <p class="model"></p> 
+                <div class="card-buy-favs">
+                    <span class="usado-unid">Usado | 500 vendidos</span>
+                    <span class="title">iPhone 11 64 Gb Negro</span> 
+                    <span class="money">$ 3.200.000</span> 
+                    <button class="btn-addfav" onclick=add_to_fav(this)>Comprar</button>
+                    <button class="btn-cart" onclick=buy(this)>Añadir a favoritos</button>
+
+                </div>
+                <div class="card-description">
+                <h1 class="desc-title">Descripción del producto</h1>
+                <p class="text-p">Pensado para vos El Samsung A51 posee el novedoso sistema operativo Android 10 que incorpora respuestas inteligentes y acciones sugeridas para todas tus aplicaciones. Entre sus diversas funcionalidades encontrarás el tema oscuro, navegación por gestos y modo sin distracciones, para que completes tus tareas mientras disfrutás al máximo tu dispositivo. Fotografía profesional en tu bolsillo Descubrí infinitas posibilidades para tus fotos con las 4 cámaras principales de tu equipo. Poné a prueba tu creatividad y jugá con la iluminación, diferentes planos y efectos para obtener grandes resultados. Experiencia visual increíble Mirá tus series y películas favoritas con la mejor definición a través de su pantalla Super AMOLED de 6.5 ". Disfrutá de colores brillantes y detalles precisos en todos tus contenidos. Desbloqueo facial y dactilar Máxima seguridad para que solo vos puedas acceder al equipo. Podrás elegir entre el sensor de huella dactilar para habilitar el teléfono en un toque, o el reconocimiento facial que permite un desbloqueo hasta un 30% más rápido. Batería superior ¡Desenchufate! Con la súper batería de 4000 mAh tendrás energía por mucho más tiempo para jugar, ver series o trabajar sin necesidad de recargar tu teléfono.</p> 
                 </div>
 
             </div>
@@ -50,22 +55,7 @@
 
       </main>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      
-    <script
+      <script
       defer
       src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"
     ></script>
@@ -84,6 +74,6 @@
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"
     ></script>
-    <script src="/scripts/main.js"></script>
+    <script src="/scripts/detail.js"></script>
   </body>
 </html>
