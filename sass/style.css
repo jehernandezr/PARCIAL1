@@ -96,14 +96,59 @@ html body .butnfav {
   background-position: center;
 }
 
-html body #products, html body #detail {
+html body #products, html body #detail, html body #favs {
   position: relative;
   padding-top: 159px;
   padding-left: 100px;
   padding-right: 100px;
 }
 
-html body #products .card, html body #detail .card {
+html body #products .breadcum, html body #detail .breadcum, html body #favs .breadcum {
+  position: absolute;
+  width: 520px;
+  height: 32px;
+  left: 99px;
+  vertical-align: top;
+  bottom: 878px;
+}
+
+html body #products ul .breadcrumb, html body #detail ul .breadcrumb, html body #favs ul .breadcrumb {
+  widh: 800px;
+  position: relative;
+  list-style: none;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: justify;
+  color: rgba(0, 0, 0, 0.67);
+}
+
+html body #products ul .breadcrumb li, html body #detail ul .breadcrumb li, html body #favs ul .breadcrumb li {
+  display: inline;
+  font-size: 18px;
+  position: relative;
+}
+
+html body #products ul .breadcrumb li a, html body #detail ul .breadcrumb li a, html body #favs ul .breadcrumb li a {
+  position: relative;
+  color: #0275d8;
+  text-decoration: none;
+}
+
+html body #products ul .breadcrumb li a:hover, html body #detail ul .breadcrumb li a:hover, html body #favs ul .breadcrumb li a:hover {
+  color: #01447e;
+  text-decoration: underline;
+}
+
+html body #products ul .breadcrumb li + li:before, html body #detail ul .breadcrumb li + li:before, html body #favs ul .breadcrumb li + li:before {
+  position: relative;
+  padding: 8px;
+  color: black;
+  content: ">";
+}
+
+html body #products .card, html body #detail .card, html body #favs .card {
   position: relative;
   width: 1240px;
   height: 221px;
@@ -114,7 +159,7 @@ html body #products .card, html body #detail .card {
   display: inline-block;
 }
 
-html body #products .card .card-image, html body #detail .card .card-image {
+html body #products .card .card-image, html body #detail .card .card-image, html body #favs .card .card-image {
   position: relative;
   display: inline-block;
   width: 180px;
@@ -126,21 +171,21 @@ html body #products .card .card-image, html body #detail .card .card-image {
   border-radius: 15px;
 }
 
-html body #products .card .card-image img, html body #detail .card .card-image img {
+html body #products .card .card-image img, html body #detail .card .card-image img, html body #favs .card .card-image img {
   position: relative;
   width: 100%;
   height: 100%;
   vertical-align: top;
 }
 
-html body #products .card .card-content, html body #detail .card .card-content {
+html body #products .card .card-content, html body #detail .card .card-content, html body #favs .card .card-content {
   position: relative;
   left: 124px;
   top: 17px;
   display: inline-block;
 }
 
-html body #products .card .card-content .price, html body #detail .card .card-content .price {
+html body #products .card .card-content .price, html body #detail .card .card-content .price, html body #favs .card .card-content .price {
   width: 150px;
   height: 35px;
   display: inline-block;
@@ -150,7 +195,7 @@ html body #products .card .card-content .price, html body #detail .card .card-co
   color: #000000;
 }
 
-html body #products .card .card-content .city, html body #detail .card .card-content .city {
+html body #products .card .card-content .city, html body #detail .card .card-content .city, html body #favs .card .card-content .city {
   display: inline-block;
   width: 150px;
   height: 35px;
@@ -161,7 +206,7 @@ html body #products .card .card-content .city, html body #detail .card .card-con
   color: #000000;
 }
 
-html body #products .card .card-content .model, html body #detail .card .card-content .model {
+html body #products .card .card-content .model, html body #detail .card .card-content .model, html body #favs .card .card-content .model {
   width: 500px;
   height: 35px;
   top: 112px;
@@ -173,14 +218,14 @@ html body #products .card .card-content .model, html body #detail .card .card-co
   color: #000000;
 }
 
-html body #products .card .card-content .shipping, html body #detail .card .card-content .shipping {
+html body #products .card .card-content .shipping, html body #detail .card .card-content .shipping, html body #favs .card .card-content .shipping {
   width: 20px;
   height: 20px;
   border-radius: 20px;
   bottom: 2px;
 }
 
-html body #products .card .shipping, html body #detail .card .shipping {
+html body #products .card .shipping, html body #detail .card .shipping, html body #favs .card .shipping {
   position: relative;
   background-image: url("/img/ico_shipping.png");
   background-repeat: no-repeat;
@@ -188,7 +233,7 @@ html body #products .card .shipping, html body #detail .card .shipping {
   background-size: 20px, 20px;
 }
 
-html body #products .card-large, html body #detail .card-large {
+html body #products .card-large, html body #detail .card-large, html body #favs .card-large {
   width: 1240px;
   height: 852px;
   top: 0px;
@@ -200,7 +245,7 @@ html body #products .card-large, html body #detail .card-large {
           box-sizing: border-box;
 }
 
-html body #products .card-large .card-image-large, html body #detail .card-large .card-image-large {
+html body #products .card-large .card-image-large, html body #detail .card-large .card-image-large, html body #favs .card-large .card-image-large {
   position: relative;
   display: inline-block;
   width: 563px;
@@ -212,14 +257,14 @@ html body #products .card-large .card-image-large, html body #detail .card-large
   vertical-align: top;
 }
 
-html body #products .card-large .card-image-large img, html body #detail .card-large .card-image-large img {
+html body #products .card-large .card-image-large img, html body #detail .card-large .card-image-large img, html body #favs .card-large .card-image-large img {
   position: relative;
   width: 100%;
   height: 100%;
   vertical-align: top;
 }
 
-html body #products .card-large .card-buy-favs, html body #detail .card-large .card-buy-favs {
+html body #products .card-large .card-buy-favs, html body #detail .card-large .card-buy-favs, html body #favs .card-large .card-buy-favs {
   font-style: normal;
   font-weight: normal;
   position: absolute;
@@ -230,7 +275,7 @@ html body #products .card-large .card-buy-favs, html body #detail .card-large .c
   color: #000000;
 }
 
-html body #products .card-large .card-buy-favs .usado-unid, html body #detail .card-large .card-buy-favs .usado-unid {
+html body #products .card-large .card-buy-favs .usado-unid, html body #detail .card-large .card-buy-favs .usado-unid, html body #favs .card-large .card-buy-favs .usado-unid {
   position: relative;
   top: 54px;
   width: 312px;
@@ -240,7 +285,7 @@ html body #products .card-large .card-buy-favs .usado-unid, html body #detail .c
   vertical-align: top;
 }
 
-html body #products .card-large .card-buy-favs .title, html body #detail .card-large .card-buy-favs .title {
+html body #products .card-large .card-buy-favs .title, html body #detail .card-large .card-buy-favs .title, html body #favs .card-large .card-buy-favs .title {
   vertical-align: top;
   width: 312px;
   height: 31px;
@@ -251,7 +296,7 @@ html body #products .card-large .card-buy-favs .title, html body #detail .card-l
   line-height: 29px;
 }
 
-html body #products .card-large .card-buy-favs .money, html body #detail .card-large .card-buy-favs .money {
+html body #products .card-large .card-buy-favs .money, html body #detail .card-large .card-buy-favs .money, html body #favs .card-large .card-buy-favs .money {
   width: 312px;
   height: 33px;
   top: 177px;
@@ -260,7 +305,7 @@ html body #products .card-large .card-buy-favs .money, html body #detail .card-l
   left: 0px;
 }
 
-html body #products .card-large .card-buy-favs .btn-addfav, html body #detail .card-large .card-buy-favs .btn-addfav {
+html body #products .card-large .card-buy-favs .btn-addfav, html body #detail .card-large .card-buy-favs .btn-addfav, html body #favs .card-large .card-buy-favs .btn-addfav {
   width: 312px;
   height: 51px;
   left: 0px;
@@ -273,7 +318,7 @@ html body #products .card-large .card-buy-favs .btn-addfav, html body #detail .c
   border-radius: 20px;
 }
 
-html body #products .card-large .card-buy-favs .btn-cart, html body #detail .card-large .card-buy-favs .btn-cart {
+html body #products .card-large .card-buy-favs .btn-cart, html body #detail .card-large .card-buy-favs .btn-cart, html body #favs .card-large .card-buy-favs .btn-cart {
   width: 312px;
   height: 51px;
   left: 0px;
@@ -286,12 +331,12 @@ html body #products .card-large .card-buy-favs .btn-cart, html body #detail .car
   border-radius: 20px;
 }
 
-html body #products .card-large .card-description, html body #detail .card-large .card-description {
+html body #products .card-large .card-description, html body #detail .card-large .card-description, html body #favs .card-large .card-description {
   position: relative;
   top: 23px;
 }
 
-html body #products .card-large .card-description .desc-title, html body #detail .card-large .card-description .desc-title {
+html body #products .card-large .card-description .desc-title, html body #detail .card-large .card-description .desc-title, html body #favs .card-large .card-description .desc-title {
   width: 312px;
   height: 31px;
   left: 50px;
@@ -304,7 +349,7 @@ html body #products .card-large .card-description .desc-title, html body #detail
   color: #000000;
 }
 
-html body #products .card-large .card-description .text-p, html body #detail .card-large .card-description .text-p {
+html body #products .card-large .card-description .text-p, html body #detail .card-large .card-description .text-p, html body #favs .card-large .card-description .text-p {
   position: relative;
   font-style: Regular;
   font-size: 14px;
@@ -317,5 +362,147 @@ html body #products .card-large .card-description .text-p, html body #detail .ca
   color: #B8ACAC;
   width: 828px;
   height: 170px;
+}
+
+html body #products .card-corta, html body #detail .card-corta, html body #favs .card-corta {
+  position: relative;
+  width: 1240px;
+  height: 89px;
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html body #products .card-corta .form-fav, html body #detail .card-corta .form-fav, html body #favs .card-corta .form-fav {
+  position: relative;
+  left: 0px;
+}
+
+html body #products .card-corta .form-fav .chekboxx, html body #detail .card-corta .form-fav .chekboxx, html body #favs .card-corta .form-fav .chekboxx {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: 40px;
+  top: 30px;
+  background: #C4C4C4;
+}
+
+html body #products .card-corta .form-fav .bton, html body #detail .card-corta .form-fav .bton, html body #favs .card-corta .form-fav .bton {
+  position: relative;
+  top: 15px;
+  width: 200px;
+  height: 51px;
+  left: 100px;
+  background: #E1677D;
+  border-radius: 20px;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  color: #FFFFFF;
+  font-style: normal;
+  font-weight: normal;
+}
+
+html body #products .card, html body #detail .card, html body #favs .card {
+  position: relative;
+  left: 0px;
+  width: 1240px;
+  height: 221px;
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: inline-block;
+}
+
+html body #products .card .chekboxx, html body #detail .card .chekboxx, html body #favs .card .chekboxx {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  left: 40px;
+  top: 92px;
+  background: #C4C4C4;
+}
+
+html body #products .card .card-image, html body #detail .card .card-image, html body #favs .card .card-image {
+  position: absolute;
+  display: inline-block;
+  width: 180px;
+  height: 180px;
+  left: 100px;
+  top: 20px;
+  bottom: 21px;
+  border-radius: 15px;
+}
+
+html body #products .card .card-image img, html body #detail .card .card-image img, html body #favs .card .card-image img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  vertical-align: top;
+}
+
+html body #products .card .card-content, html body #detail .card .card-content, html body #favs .card .card-content {
+  position: relative;
+  left: 348px;
+  top: 17px;
+  display: inline-block;
+}
+
+html body #products .card .card-content .price, html body #detail .card .card-content .price, html body #favs .card .card-content .price {
+  position: relative;
+  width: 150px;
+  height: 35px;
+  display: inline-block;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 29px;
+  color: #000000;
+}
+
+html body #products .card .card-content .verArticulo, html body #detail .card .card-content .verArticulo, html body #favs .card .card-content .verArticulo {
+  display: inline-block;
+  position: relative;
+  top: 67px;
+  left: 466px;
+  bottom: 103px;
+  width: 200px;
+  height: 51px;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  color: #FFFFFF;
+  background: #C968CB;
+  border-radius: 20px;
+  font-style: normal;
+  font-weight: normal;
+}
+
+html body #products .card .card-content .model, html body #detail .card .card-content .model, html body #favs .card .card-content .model {
+  width: 500px;
+  height: 35px;
+  top: 112px;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+  color: #000000;
+}
+
+html body #products .card .card-content .shipping, html body #detail .card .card-content .shipping, html body #favs .card .card-content .shipping {
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+  bottom: 2px;
+}
+
+html body #products .card .shipping, html body #detail .card .shipping, html body #favs .card .shipping {
+  position: relative;
+  background-image: url("/img/ico_shipping.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 20px, 20px;
 }
 /*# sourceMappingURL=style.css.map */

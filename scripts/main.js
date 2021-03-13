@@ -64,5 +64,19 @@ function irdetail(este) {
   let mi_product = f.find((item) => {return item.id === id_product;});
   localStorage.setItem("seleccionado",JSON.stringify(mi_product));
   window.location="detail.html";
+}
+
+
+function search() {
+  buscar= document.querySelector(".form")[0].value;
+  data=JSON.parse(localStorage.getItem("productos"));
+  encontrados= data.filter((element)=>{return(element.categories.includes(buscar));});
+  localStorage.setItem("buscados",JSON.stringify(encontrados));
+  localStorage.removeItem("seleccionado");
+  window.location="/busqueda.html";
+}
+
+function listfav(){
+window.location="/favorito.html";
 
 }

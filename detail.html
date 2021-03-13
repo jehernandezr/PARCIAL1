@@ -20,19 +20,29 @@
   <body>
     <header>
         <nav class="navbar navbar-dark bg-mio fixed-top">
-          <a class="logo" href="#home" ><img src="/img/logo.png" alt="logo" ></a>
+          <a class="logo" href="/" ><img src="/img/logo.png" alt="logo" ></a>
           <form class="form">
-            <input class="form-control" type="search" placeholder="Search" aria-label="Search">
-            <button class="butn" type="submit"></button>
+            <input class="form-control" type="text" name="acepto" id="acepto" placeholder=Search>
+            <input class="butn" type="button" onclick=search()></input>
           </form>
           <button class="butnfav" ></button>
         </nav>
+
       </header>
+      
       <main>
         <section id="detail">
+            <div class="breadcum">
+                <ul class="breadcrumb">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Pictures</a></li>
+                    <li><a href="#">Summer 15</a></li>
+                    <li>Italy</li>
+                  </ul>
+            </div>
             <div class="card-large" id="1">
                 <div class="card-image-large">
-                <img src="/img/pruba.png" onclick=irdetail(this) alt="image">   
+                <img src="/img/pruba.png" alt="image">   
                 </div>
                 <div class="card-buy-favs">
                     <span class="usado-unid">Usado | 500 vendidos</span>

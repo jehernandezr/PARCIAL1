@@ -1,3 +1,5 @@
+const element = JSON.parse(localStorage.getItem("seleccionado"));
+const data = JSON.parse(localStorage.getItem("productos"));
 function formatCurrency(locales, currency, fractionDigits, number) {
   let formatted = new Intl.NumberFormat(locales, {
     style: "currency",
@@ -7,7 +9,6 @@ function formatCurrency(locales, currency, fractionDigits, number) {
   return formatted;
 }
 function loadDetail() {
-  const element = JSON.parse(localStorage.getItem("seleccionado"));
   const oldCard =document.querySelector(".card-large");
   let image = element.picture;
   let id = element.id;
@@ -42,11 +43,12 @@ function create_elementDetail(id,title,description,units,condition,price,image,o
   oldCard.parentNode.replaceChild(Newcard,oldCard);
 
 }
-function search(event){
-    event.preventDefault();
-    buscar= document.querySelector(".form input")[0].value;
-    console.log(buscar);
-
+function search() {
+  buscar= document.querySelector(".form")[0].value;
+  encontrados= data.filter((element)=>{return(element.categories.includes(buscar));});
+  localStorage.setItem("buscados",JSON.stringify(encontrados));
+  localStorage.removeItem("seleccionado");
+  window.location="/busqueda.html";
 }
 
 loadDetail();

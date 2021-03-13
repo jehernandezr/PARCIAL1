@@ -25,24 +25,53 @@
             <input class="form-control" type="text" name="acepto" id="acepto" placeholder=Search>
             <input class="butn" type="button" onclick=search()></input>
           </form>
-          <button class="butnfav" type="button" onclick=listfav() ></button>
+          <button class="butnfav" ></button>
         </nav>
       </header>
       <main>
-        <section id="products">
-            <div class="card" id="1">
+        <section id="favs">
+
+
+            
+            <div class="card" id="fav1">
+
+                <div class="card-corta">
+                    <form class="form-fav">
+                        <input class="chekboxx" type="checkbox" id="chektodo" value="option1" aria-label="...">
+                        <button class="bton" type="button" onclick=deletefav() 
+                        > Eliminar</button>
+                    
+                    </form>
+    
+                </div>
+                <input class="chekboxx" type="checkbox" id="chektodo" value="option1" aria-label="...">
                 <div class="card-image">
                 <img src="/img/pruba.png" onclick=irdetail(this) alt="image">   
                 </div>
                 <div class="card-content">
-                <span class="price">
+                <span class="price"> $3.200.000
                 <img class="shipping"></img>
                 </span>
-                <span class="city"></span>
-                <p class="model"></p> 
+                <button class="verArticulo" type="button">Ver artículo</button>
+                <p class="model">iPhone 11 64 Gb Negro</p> 
                 </div>
 
             </div>
+            <div class="card" id="fav1">
+                <input class="chekboxx" type="checkbox" id="chektodo" value="option1" aria-label="...">
+                <div class="card-image">
+                <img src="/img/pruba.png" onclick=irdetail(this) alt="image">   
+                </div>
+                <div class="card-content">
+                <span class="price"> $3.200.000
+                <img class="shipping"></img>
+                </span>
+                <button class="verArticulo" type="button">Ver artículo</button>
+                <p class="model">iPhone 11 64 Gb Negro</p> 
+                </div>
+
+            </div>
+
             
         </section>
 
@@ -84,6 +113,6 @@
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"
     ></script>
-    <script src="/scripts/main.js"></script>
+    <script src="/scripts/favorito.js"></script>
   </body>
 </html>
