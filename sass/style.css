@@ -8,6 +8,99 @@ html :root {
 }
 
 html body {
-  font-family: "Noto Sans KR", sans-serif;
+  font-family: "Lato";
+  margin: 0px;
+  background: #ECE9E9;
+  /* Rectangle 1 */
+}
+
+html body .bg-mio {
+  position: absolute;
+  width: 1440px;
+  height: 80px;
+  background: -webkit-gradient(linear, right top, left top, from(#745ECE), color-stop(47.4%, rgba(105, 72, 237, 0.41)), color-stop(82.29%, #5E63C8));
+  background: linear-gradient(270deg, #745ECE 0%, rgba(105, 72, 237, 0.41) 47.4%, #5E63C8 82.29%);
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+html body .logo {
+  position: absolute;
+  width: 100px;
+  height: 60px;
+  left: 100px;
+  top: 8px;
+  bottom: 12px;
+  mix-blend-mode: normal;
+  border-radius: 2px;
+}
+
+html body .form {
+  position: absolute;
+  width: 892px;
+  height: 47px;
+  right: 100px;
+  left: 448px;
+  top: 18px;
+  background: #FFFFFF;
+}
+
+html body .form .butn {
+  width: 56px;
+  height: 47px;
+  left: 836px;
+  top: 0px;
+  background: #E5E5E5;
+  border: 1px solid #C6C2C2;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-image: url("/img/search.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 36px, 36px;
+}
+
+html body .form .form-control {
+  right: 91px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  width: 792px;
+  height: 30px;
+  top: 9px;
+  left: 9px;
+  border: 0px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 29px;
+  color: #D5C9C9;
+}
+
+html body .butnfav {
+  width: 44px;
+  height: 40px;
+  left: 1375px;
+  top: 20px;
+  background-color: rgba(255, 255, 255, 0);
+  background-image: url("/img/fav.png");
+  background-repeat: no-repeat;
+}
+
+html body #products {
+  position: relative;
+  padding-top: 159px;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+html body #products .card {
+  position: absolute;
+  width: 1240px;
+  height: 221px;
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 /*# sourceMappingURL=style.css.map */
