@@ -96,24 +96,18 @@ html body .butnfav {
   background-position: center;
 }
 
-html body #products, html body #detail, html body #favs {
-  position: relative;
-  padding-top: 159px;
-  padding-left: 100px;
-  padding-right: 100px;
+html body .h-title {
+  width: 312px;
+  height: 31px;
+  left: 100px;
+  top: 104px;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 34px;
+  color: #000000;
 }
 
-html body #products .breadcum, html body #detail .breadcum, html body #favs .breadcum {
-  position: absolute;
-  width: 520px;
-  height: 32px;
-  left: 99px;
-  vertical-align: top;
-  bottom: 878px;
-}
-
-html body #products ul .breadcrumb, html body #detail ul .breadcrumb, html body #favs ul .breadcrumb {
-  widh: 800px;
+html body .breadcrumb {
   position: relative;
   list-style: none;
   font-style: normal;
@@ -121,31 +115,63 @@ html body #products ul .breadcrumb, html body #detail ul .breadcrumb, html body 
   font-size: 18px;
   line-height: 22px;
   text-align: justify;
+  display: inline-block;
+  margin: 0px !important;
+  padding: 0px !important;
   color: rgba(0, 0, 0, 0.67);
 }
 
-html body #products ul .breadcrumb li, html body #detail ul .breadcrumb li, html body #favs ul .breadcrumb li {
-  display: inline;
-  font-size: 18px;
-  position: relative;
+html body .breadcum {
+  position: absolute;
+  display: inline-block;
+  width: 100%;
+  height: 32px;
+  left: 99px;
+  top: 114px;
 }
 
-html body #products ul .breadcrumb li a, html body #detail ul .breadcrumb li a, html body #favs ul .breadcrumb li a {
+html body .breadcum ul {
+  display: inline-block;
+  position: inherit;
+}
+
+html body .breadcum ul li {
   position: relative;
+  display: inline-block;
+  font-size: 18px;
+  width: auto;
+}
+
+html body .breadcum ul li a {
   color: #0275d8;
   text-decoration: none;
+  position: inherit;
 }
 
-html body #products ul .breadcrumb li a:hover, html body #detail ul .breadcrumb li a:hover, html body #favs ul .breadcrumb li a:hover {
+html body .breadcum ul li a :hover {
   color: #01447e;
   text-decoration: underline;
+  left: -1px;
+  top: 0px;
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  position: relative;
 }
 
-html body #products ul .breadcrumb li + li:before, html body #detail ul .breadcrumb li + li:before, html body #favs ul .breadcrumb li + li:before {
+html body .breadcum ul li + li:before {
   position: relative;
   padding: 8px;
   color: black;
   content: ">";
+}
+
+html body #products, html body #detail, html body #favs {
+  position: relative;
+  padding-top: 159px;
+  padding-left: 100px;
+  padding-right: 100px;
 }
 
 html body #products .card, html body #detail .card, html body #favs .card {
@@ -233,6 +259,14 @@ html body #products .card .shipping, html body #detail .card .shipping, html bod
   background-size: 20px, 20px;
 }
 
+html body #products .card-xtra-l, html body #detail .card-xtra-l, html body #favs .card-xtra-l {
+  height: 900px !important;
+}
+
+html body #products .card-xtra-xx-l, html body #detail .card-xtra-xx-l, html body #favs .card-xtra-xx-l {
+  height: 1040px !important;
+}
+
 html body #products .card-large, html body #detail .card-large, html body #favs .card-large {
   width: 1240px;
   height: 852px;
@@ -305,7 +339,7 @@ html body #products .card-large .card-buy-favs .money, html body #detail .card-l
   left: 0px;
 }
 
-html body #products .card-large .card-buy-favs .btn-addfav, html body #detail .card-large .card-buy-favs .btn-addfav, html body #favs .card-large .card-buy-favs .btn-addfav {
+html body #products .card-large .card-buy-favs .btn-cart, html body #detail .card-large .card-buy-favs .btn-cart, html body #favs .card-large .card-buy-favs .btn-cart {
   width: 312px;
   height: 51px;
   left: 0px;
@@ -318,7 +352,7 @@ html body #products .card-large .card-buy-favs .btn-addfav, html body #detail .c
   border-radius: 20px;
 }
 
-html body #products .card-large .card-buy-favs .btn-cart, html body #detail .card-large .card-buy-favs .btn-cart, html body #favs .card-large .card-buy-favs .btn-cart {
+html body #products .card-large .card-buy-favs .btn-addfav, html body #detail .card-large .card-buy-favs .btn-addfav, html body #favs .card-large .card-buy-favs .btn-addfav {
   width: 312px;
   height: 51px;
   left: 0px;
@@ -332,15 +366,14 @@ html body #products .card-large .card-buy-favs .btn-cart, html body #detail .car
 }
 
 html body #products .card-large .card-description, html body #detail .card-large .card-description, html body #favs .card-large .card-description {
-  position: relative;
-  top: 23px;
+  position: absolute;
+  top: 597px;
+  left: 50px;
 }
 
 html body #products .card-large .card-description .desc-title, html body #detail .card-large .card-description .desc-title, html body #favs .card-large .card-description .desc-title {
   width: 312px;
   height: 31px;
-  left: 50px;
-  top: 23px;
   position: relative;
   font-style: normal;
   font-weight: normal;
@@ -353,8 +386,7 @@ html body #products .card-large .card-description .text-p, html body #detail .ca
   position: relative;
   font-style: Regular;
   font-size: 14px;
-  top: 77px;
-  left: 50px;
+  top: 23px;
   line-height: 17px;
   line-height: 100%;
   align: justify;
@@ -388,13 +420,29 @@ html body #products .card-corta .form-fav .chekboxx, html body #detail .card-cor
   background: #C4C4C4;
 }
 
-html body #products .card-corta .form-fav .bton, html body #detail .card-corta .form-fav .bton, html body #favs .card-corta .form-fav .bton {
+html body #products .card-corta .form-fav .bton-activ, html body #detail .card-corta .form-fav .bton-activ, html body #favs .card-corta .form-fav .bton-activ {
+  background: #E1677D;
   position: relative;
   top: 15px;
   width: 200px;
   height: 51px;
   left: 100px;
-  background: #E1677D;
+  border-radius: 20px;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  color: #FFFFFF;
+  font-style: normal;
+  font-weight: normal;
+}
+
+html body #products .card-corta .form-fav .bton-desable, html body #detail .card-corta .form-fav .bton-desable, html body #favs .card-corta .form-fav .bton-desable {
+  position: relative;
+  top: 15px;
+  width: 200px;
+  height: 51px;
+  left: 100px;
+  background: #ECE9E9;
   border-radius: 20px;
   font-size: 18px;
   line-height: 22px;
@@ -504,5 +552,92 @@ html body #products .card .shipping, html body #detail .card .shipping, html bod
   background-repeat: no-repeat;
   background-position: center;
   background-size: 20px, 20px;
+}
+
+html body .fondo_transparente {
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.014);
+  position: absolute;
+  height: 1024px;
+  width: 1440px;
+  display: none;
+  vertical-align: top;
+}
+
+html body .modal-mio {
+  position: absolute;
+  width: 578px;
+  height: 364px;
+  right: 276px;
+  left: 486px;
+  top: 359px;
+  background: #FFFFFF;
+  border: 1px solid #C6C2C2;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  vertical-align: top;
+  margin: 0px;
+}
+
+html body .modal_titulo {
+  position: relative;
+  width: 312px;
+  height: 31px;
+  left: 140px;
+  top: 114px;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 29px;
+  text-align: center;
+}
+
+html body .modal_mensaje {
+  position: absolute;
+  width: 312px;
+  height: 51px;
+  left: 140px;
+  top: 176px;
+  right: 126px;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 29px;
+}
+
+html body .modal_mensaje span {
+  text-align: center;
+}
+
+html body .linea_btn-modal {
+  position: absolute;
+  left: 0px;
+  top: 295px;
+  height: 70px;
+  width: 100%;
+  border-top: 1px solid #D5C9C9;
+}
+
+html body #closemodal {
+  position: relative;
+  width: 145px;
+  height: 51px;
+  left: 420px;
+  top: 9px;
+  background: #8C86D7;
+  border-radius: 20px;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 29px;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+html body #closemodal:hover {
+  background: crimson;
+  color: white;
 }
 /*# sourceMappingURL=style.css.map */

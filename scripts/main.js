@@ -8,8 +8,17 @@ function formatCurrency(locales, currency, fractionDigits, number) {
 }
 
 function mostrardata(data) {
-  localStorage.setItem("productos",JSON.stringify(data.items));
-  data.items.forEach((element) => {
+  let mydata=data;
+  if (localStorage.getItem("productos")) {
+    localStorage.setItem("productos",JSON.stringify(data));
+    mydata=data;
+  }
+  else {
+    mydata=data.items;
+    localStorage.setItem("productos",JSON.stringify(data.items));
+  }
+  
+  mydata.forEach((element) => {
     let image = element.picture;
     let id = element.id;
     let title = element.title;
@@ -30,13 +39,24 @@ function mostrardata(data) {
 
 }
 
-fetch(
-  "https://gist.githubusercontent.com/jhonatan89/719f8a95a8dce961597f04b3ce37f97b/raw/4b7f1ac723a14b372ba6899ce63dbd7c2679e345/products-ecommerce"
-)
-  .then((response) => response.json())
-  .then(mostrardata)
-  .catch((err) => (err.message));
 
+function hacerFetch()
+{ console.log(localStorage.getItem("productos")=="undefined");
+  console.log(localStorage.getItem("productos")==undefined);
+  if(localStorage.getItem("productos")==undefined || localStorage.getItem("productos")==="undefined")
+  {
+    fetch(
+      "https://gist.githubusercontent.com/jhonatan89/719f8a95a8dce961597f04b3ce37f97b/raw/4b7f1ac723a14b372ba6899ce63dbd7c2679e345/products-ecommerce"
+    )
+      .then((response) => response.json())
+      .then(mostrardata)
+      .catch((err) => (err.message));
+    
+  }
+  else {
+    mostrardata(JSON.parse(localStorage.getItem("productos")));
+  }
+}
 
 function crear_elements (id,image, price,title,location, is_freeShipping, new_card) {
   card_image=new_card.children[0];
@@ -76,7 +96,11 @@ function search() {
   window.location="/busqueda.html";
 }
 
-function listfav(){
-window.location="/favorito.html";
+function listfav() {
+  window.location="/favorito.html";
 
 }
+
+
+
+hacerFetch();

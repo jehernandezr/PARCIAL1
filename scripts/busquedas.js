@@ -79,3 +79,8 @@ function search() {
   localStorage.removeItem("seleccionado");
   window.location="/busqueda.html";
 }
+
+function listfav() {
+  window.location="/favorito.html";
+  
+}

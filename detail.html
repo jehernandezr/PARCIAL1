@@ -25,21 +25,18 @@
             <input class="form-control" type="text" name="acepto" id="acepto" placeholder=Search>
             <input class="butn" type="button" onclick=search()></input>
           </form>
-          <button class="butnfav" ></button>
+          <button class="butnfav" type="button" onclick=listfav()></button>
         </nav>
 
       </header>
       
       <main>
+        <div class="breadcum">
+          <ul class="breadcrumb">
+            </ul>
+      </div>
         <section id="detail">
-            <div class="breadcum">
-                <ul class="breadcrumb">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Pictures</a></li>
-                    <li><a href="#">Summer 15</a></li>
-                    <li>Italy</li>
-                  </ul>
-            </div>
+            
             <div class="card-large" id="1">
                 <div class="card-image-large">
                 <img src="/img/pruba.png" alt="image">   
@@ -48,8 +45,8 @@
                     <span class="usado-unid">Usado | 500 vendidos</span>
                     <span class="title">iPhone 11 64 Gb Negro</span> 
                     <span class="money">$ 3.200.000</span> 
-                    <button class="btn-addfav" onclick=add_to_fav(this)>Comprar</button>
-                    <button class="btn-cart" onclick=buy(this)>Añadir a favoritos</button>
+                    <button class="btn-cart" type="button" onclick=buyme(this)>Comprar</button>
+                    <button class="btn-addfav" type="button" onclick=add_to_fav(this)>Añadir a favoritos</button>
 
                 </div>
                 <div class="card-description">
@@ -60,10 +57,24 @@
             </div>
             
         </section>
-
+        
 
 
       </main>
+
+      <div class="fondo_transparente">
+        <div class="modal-mio">
+          <div class="modal_titulo">iPhone 11 64 Gb Negro</div>
+          <div class="modal_mensaje">
+            <span>Añadido al carrito de compras</span>
+          </div>
+          <div class="linea_btn-modal">
+            <button type="button" class="boton" id="closemodal">Close</button>
+          </div>
+          
+          </div>
+        </div>  
+
 
       <script
       defer

@@ -29,49 +29,32 @@
         </nav>
       </header>
       <main>
+        <h1 class="h-title">Favoritos</h1>
         <section id="favs">
+          <div class="card-corta">
+            <form class="form-fav">
+                <input class="chekboxx" type="checkbox" id="chektodo" value="option1" onclick="selectfavs(this)">
+                <button id ="bt-del"class="bton-desable" type="button" onclick=deletefav() 
+                > Eliminar</button>
+            </form>
 
+        </div>
+          <div class="card">
+          <input class="chekboxx" type="checkbox"  onclick=cambiarColor(this)>
+          <div class="card-image">
+          <img src="/img/pruba.png"  alt="image">   
+          </div>
+          <div class="card-content">
+          <span class="price"> $3.200.000
+          <img class="shipping"></img>
+          </span>
+          <button class="verArticulo" type="button" onclick=irdetail(this)>Ver artículo</button>
+          <p class="model">iPhone 11 64 Gb Negro</p> 
+          </div>
 
-            
-            <div class="card" id="fav1">
+          </div>
 
-                <div class="card-corta">
-                    <form class="form-fav">
-                        <input class="chekboxx" type="checkbox" id="chektodo" value="option1" aria-label="...">
-                        <button class="bton" type="button" onclick=deletefav() 
-                        > Eliminar</button>
-                    
-                    </form>
-    
-                </div>
-                <input class="chekboxx" type="checkbox" id="chektodo" value="option1" aria-label="...">
-                <div class="card-image">
-                <img src="/img/pruba.png" onclick=irdetail(this) alt="image">   
-                </div>
-                <div class="card-content">
-                <span class="price"> $3.200.000
-                <img class="shipping"></img>
-                </span>
-                <button class="verArticulo" type="button">Ver artículo</button>
-                <p class="model">iPhone 11 64 Gb Negro</p> 
-                </div>
-
-            </div>
-            <div class="card" id="fav1">
-                <input class="chekboxx" type="checkbox" id="chektodo" value="option1" aria-label="...">
-                <div class="card-image">
-                <img src="/img/pruba.png" onclick=irdetail(this) alt="image">   
-                </div>
-                <div class="card-content">
-                <span class="price"> $3.200.000
-                <img class="shipping"></img>
-                </span>
-                <button class="verArticulo" type="button">Ver artículo</button>
-                <p class="model">iPhone 11 64 Gb Negro</p> 
-                </div>
-
-            </div>
-
+  
             
         </section>
 

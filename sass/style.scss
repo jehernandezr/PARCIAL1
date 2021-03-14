@@ -109,24 +109,19 @@ html {
 
             }
 
-
-#products, #detail, #favs {
-              position: relative;
-              padding-top: 159px;
-              padding-left: 100px;
-              padding-right: 100px;
-
-.breadcum{
-      position: absolute;
-      width: 520px;
-      height: 32px;
-      left: 99px; 
-      vertical-align: top;
-      bottom: 878px
+.h-title{
+width: 312px;
+height: 31px;
+left: 100px;
+top: 104px;
+font-weight: bold;
+font-size: 28px;
+line-height: 34px;
+color: #000000;
   }
-ul {
-    .breadcrumb 
-      { widh: 800px;
+
+.breadcrumb 
+      { 
       position: relative;
       list-style: none;
       font-style: normal;
@@ -134,20 +129,42 @@ ul {
       font-size: 18px;
       line-height: 22px;
       text-align: justify;
-      color: rgba(0, 0, 0, 0.67);
-      li {                      
-        display: inline;
-        font-size: 18px;
+      display: inline-block;
+      margin: 0px!important;
+      padding: 0px!important;
+      color: rgba(0, 0, 0, 0.67);}
+
+.breadcum {
+     position: absolute;
+      display: inline-block;  
+      width: 100%;
+      height: 32px;
+      left: 99px;
+      top: 114px; 
+
+ul {
+    display: inline-block;
+    position: inherit;
+      li {   
         position: relative;
+        display: inline-block;
+        font-size: 18px;
+        width: auto;
         a {
-          position: relative;
           color: #0275d8;
           text-decoration: none;
+          position: inherit;
         }
-        a:hover {
+          a :hover {
         color: #01447e;
         text-decoration: underline;
-      }
+        left: -1px;
+        top: 0px;
+        transform-origin: left;
+        transform: scaleX(1);
+        position:relative;
+
+          }
 
         }
       li+li:before {
@@ -160,6 +177,17 @@ ul {
     
     }
   }
+
+
+
+
+
+#products, #detail, #favs {
+              position: relative;
+              padding-top: 159px;
+              padding-left: 100px;
+              padding-right: 100px;
+
 
 
 
@@ -244,6 +272,13 @@ ul {
               
   }
 
+    .card-xtra-l{
+      height: 900px !important;
+      }
+
+        .card-xtra-xx-l{
+      height: 1040px !important;
+      }
 .card-large{
 width: 1240px;
 height: 852px;
@@ -253,7 +288,7 @@ display: inline-block;
 background: #FFFFFF;
 border: 1px solid rgba(0, 0, 0, 0.15);
 box-sizing: border-box;
-  
+
     .card-image-large{
                 position: relative;
                 display: inline-block;
@@ -309,7 +344,7 @@ box-sizing: border-box;
         line-height: 29px;
         left: 0px;
         }
-      .btn-addfav{
+      .btn-cart{
         width: 312px;
         height: 51px;
         left: 0px;
@@ -322,7 +357,7 @@ box-sizing: border-box;
         border-radius: 20px;
 
         }
-        .btn-cart{
+        .btn-addfav{
         width: 312px;
         height: 51px;
         left: 0px;
@@ -342,13 +377,13 @@ box-sizing: border-box;
 
     }
   .card-description{
-    position: relative;
-    top: 23px;
+    position: absolute;
+    top:597px;
+    left: 50px;
     .desc-title{
       width: 312px;
       height: 31px;
-      left: 50px;
-      top: 23px;
+
       position: relative;
       font-style: normal;
       font-weight: normal;
@@ -361,8 +396,7 @@ box-sizing: border-box;
             position: relative;
             font-style: Regular;
             font-size: 14px;
-            top:77px;
-            left:50px;
+            top:23px;
             line-height: 17px;
             line-height: 100%;
             align: justify;
@@ -398,13 +432,28 @@ box-sizing: border-box;
       top:30px;
       background: #C4C4C4;
       }
-    .bton {
+    .bton-activ {
+        background: #E1677D;
+        position: relative;
+        top: 15px;
+        width: 200px;
+        height: 51px;
+        left: 100px;
+        border-radius: 20px;
+        font-size: 18px;
+        line-height: 22px;
+        text-align: center;
+        color: #FFFFFF;
+        font-style: normal;
+        font-weight: normal;
+      }
+      .bton-desable{
     position: relative;
     top: 15px;
     width: 200px;
     height: 51px;
     left: 100px;
-    background: #E1677D;
+    background: #ECE9E9;
     border-radius: 20px;
     font-size: 18px;
     line-height: 22px;
@@ -413,11 +462,11 @@ box-sizing: border-box;
     font-style: normal;
     font-weight: normal;
 
-      }
+        }
   }
 
    }
-.card {
+.card{
                 position: relative;
                 left: 0px;
                 width: 1240px;
@@ -519,7 +568,88 @@ box-sizing: border-box;
 
 }
 
+  .fondo_transparente{
+            top: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0.014);
+            position: absolute;
+            height: 1024px;
+            width: 1440px;
+            display: none;
+            vertical-align: top;
 
+        }
+
+.modal-mio{
+            position: absolute;
+            width: 578px;
+            height: 364px;
+            right: 276px;
+            left: 486px;
+            top: 359px;
+            background: #FFFFFF;
+            border: 1px solid #C6C2C2;
+            box-sizing: border-box;
+            display: inline-block;
+            align-items: center;
+            vertical-align: top;
+            margin:0px;
+
+        }
+
+        .modal_titulo{
+        position: relative;
+        width: 312px;
+        height: 31px;
+        left: 140px;
+        top: 114px;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 29px;
+        text-align: center;
+        }
+        .modal_mensaje{   
+          position: absolute;         
+          width: 312px;
+          height: 51px;
+          left: 140px;
+          top: 176px;
+          right: 126px;
+          font-weight: bold;
+          font-size: 24px;
+          line-height: 29px;
+          span{
+            text-align: center;
+            }
+
+        }
+        .linea_btn-modal{  
+          position: absolute;  
+          left: 0px;
+          top: 295px;
+          height: 70px;
+          width: 100%;
+          border-top: 1px solid #D5C9C9;
+        }
+
+          #closemodal {
+            position: relative;
+            width: 145px;
+            height: 51px;
+            left: 420px;
+            top: 9px;
+            background: #8C86D7;
+            border-radius: 20px;
+            font-weight: normal;
+            font-size: 24px;
+            line-height: 29px;
+            text-align: center;
+            color: #FFFFFF;
+            }
+        #closemodal:hover{
+            background: crimson;
+            color: white;
+        }
 
 
 }
